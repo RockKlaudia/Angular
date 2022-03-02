@@ -1,25 +1,32 @@
 <div class="container">
-    <div class="box">
-<form #playerForm="ngForm" 
-    (submit)="onClick()">   
-    <input 
-    type="text"
-    [(ngModel)]="playerName" name="playerName" placeholder="Player ID"
-    #myInput="ngModel"
-    required
-    minlength="3"/>
-        
-    <div *ngIf="myInput.invalid">Incorrect name</div>
-        <br>
-    <input type="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-    [(ngModel)]="playerEmail" name="playerEmail" placeholder="Email"
-    #myInput2="ngModel"
-    required
-    minlength="6"/>
-    <div *ngIf="myInput2.invalid">Incorrect e-mail adress</div>
-<p>
-    <button [disabled]="!playerForm.valid">Play</button>
-</p>
-</form>
-</div>
+  <div class="box">
+    <form #playerForm="ngForm" (submit)="onClick()">
+      <input
+        type="text"
+        [(ngModel)]="playerName"
+        name="playerName"
+        placeholder="Player ID"
+        #myInput="ngModel"
+        required
+        minlength="3"
+      />
+
+      <div *ngIf="myInput.invalid">Incorrect name</div>
+      <br />
+      <input
+        type="email"
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+        [(ngModel)]="playerEmail"
+        name="playerEmail"
+        placeholder="Email"
+        #myInput2="ngModel"
+        required
+        minlength="6"
+      />
+      <div *ngIf="myInput2.invalid">Incorrect e-mail adress</div>
+      <p>
+        <button [disabled]="!playerForm.valid">Play</button>
+      </p>
+    </form>
+  </div>
 </div>
