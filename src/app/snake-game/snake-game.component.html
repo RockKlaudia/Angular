@@ -19,10 +19,10 @@
             (click)="onReset()">Reset</button>
     <br>
     <br>
-        <button class="moved" (click)="game.actionUp()">Up</button>
-        <button class="other-move" (click)="game.actionLeft()">Left</button>
-        <button class="other-move" (click)="game.actionRight()">Right</button>
-        <button class="down-move" (click)="game.actionDown()">Down</button>
+        <button (click)="game.actionUp()">Up</button>
+        <button (click)="game.actionLeft()">Left</button>
+        <button (click)="game.actionRight()">Right</button>
+        <button (click)="game.actionDown()">Down</button>
     </div>
 
     <br>
