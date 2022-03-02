@@ -1,0 +1,7 @@
+<div *ngIf="!isItOn">
+  <h4>Snake Game - welcome!</h4>
+  <p>Enter your name and e-mail adress</p>
+</div>
+  <app-player-form *ngIf="!isItOn" (fullPlayerForm)="switchTrue($event)"></app-player-form>
+
+  <app-snake-game *ngIf="isItOn" [playerId]="fullForm"></app-snake-game>
